@@ -1,0 +1,44 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        applicationId "com.example.wychi.buildtesting"
+        minSdkVersion 9
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+
+        //testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //compile 'com.android.support:appcompat-v7:22.0.0'
+    //compile 'com.google.android.gms:play-services:7.3.0'
+    compile (':mylibrary', ext:'aar')
+    compile project(':mylibrary2_wrap_jar')
+    //compile 'com.android.tools.build:gradle:1.2.3'
+
+    // Testing-only dependencies
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.0'
+//    androidTestCompile('com.android.support.test:runner:0.2') {
+//        exclude module: 'support-annotations'
+//    }
+}

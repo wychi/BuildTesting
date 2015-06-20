@@ -16,5 +16,4 @@
 #   public *;
 #}
 
--keep class com.example.wychi.mylibrary.MyClass {
-}
+-keep class com.example.wychi.mylibrary.NoOneUseClass

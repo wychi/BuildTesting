@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
+    compileSdkVersion 18
     buildToolsVersion "21.1.2"
 
     defaultConfig {
         applicationId "com.example.wychi.buildtesting"
         minSdkVersion 9
-        targetSdkVersion 21
+        targetSdkVersion 18
         versionCode 1
         versionName "1.0"
 
@@ -32,7 +32,7 @@ dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     //compile 'com.android.support:appcompat-v7:22.0.0'
     //compile 'com.google.android.gms:play-services:7.3.0'
-    compile (':mylibrary', ext:'aar')
+    compile project(':mylibrary')
     compile project(':mylibrary2_wrap_jar')
     //compile 'com.android.tools.build:gradle:1.2.3'
 

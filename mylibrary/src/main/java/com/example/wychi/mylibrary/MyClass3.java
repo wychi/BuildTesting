@@ -1,9 +1,9 @@
 package com.example.wychi.mylibrary;
 
 /**
- * Created by wychi on 2015/5/17.
+ * Created by wychi on 2015/6/6.
  */
-public class MyClass {
+public class MyClass3 {
     public static int s1 = 0;
     public static int s2;
     public int f1 = 0;

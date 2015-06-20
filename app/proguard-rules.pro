@@ -15,3 +15,22 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+-keep class com.example.wychi.mylibrary.KeepNoOneUseClass
+-keep class com.example.wychi.mylibrary.KeepNoOneUseClass1 { *; }
+
+#-keepclassmembers class com.example.wychi.mylibrary.MyClass2 {
+#  public void func1();
+#  public void func2();
+#}
+
+#-keepclassmembers class com.example.wychi.mylibrary.MyClass3 {
+#  public void func1();
+#  public void func2();
+#}
+#
+#-keepclasseswithmembers class com.example.wychi.mylibrary.MyClass3 {
+#  int f2;
+#}
+
+#-keepclassmembers class * extends android.app.Service {*;}

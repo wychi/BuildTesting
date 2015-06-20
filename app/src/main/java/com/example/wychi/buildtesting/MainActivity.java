@@ -1,25 +1,36 @@
 package com.example.wychi.buildtesting;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.wychi.mylibrary.MyClass;
+import com.example.wychi.mylibrary.MyClass2;
+import com.example.wychi.mylibrary.MyClass3;
+import com.example.wychi.mylibrary.MyClass4;
+import com.example.wychi.mylibrary.NoOneUseClass;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 
-    retrofit.client.OkClient mHttpClient;
+    MyClass c = new MyClass();
+    MyClass2 c2 = null;
+    MyClass4 c4 = new MyClass4();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        MyClass c = new MyClass();
-        c.func1();
+//        c.func1();
+//        MyClass3 c3 = new MyClass3();
+    }
 
-        mHttpClient = new retrofit.client.OkClient();
+    public void unused() {
+        c.func1();
+        MyClass3 c3 = new MyClass3();
+
     }
 
     @Override
